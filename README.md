@@ -58,81 +58,81 @@ Detailed Description
 
 Bir vektör yaratmak için:
 
-	Vector(valuesOrSize: any = undefined, initial: any = undefined, index: any = undefined)
+	__construct(mixed $valuesOrSize = null, mixed $initial = null, mixed $index = null)
 
 Vektörler eklemek için
 
-	addVector(v: Vector)
+	addVector(Vector $v): void
 
 Çıkarmak için
 
-	subtract(v: Vector)
-	difference(v: Vector): Vector
+	subtract(Vector $v): void
+	difference(Vector $v): Vector
 
 İç çarpım için
 
-	dotProduct(v: Vector): number
-	dotProductWithSelf(): number
+	dotProduct(Vector $v): float
+	dotProductWithItself(): float
 
 Bir vektörle cosinüs benzerliğini hesaplamak için
 
-	cosineSimilarity(Vector v): number
+	cosineSimilarity(Vector $v): float
 
 Bir vektörle eleman eleman çarpmak için
 
-	elementProduct(v: Vector): Vector
+	elementProduct(Vector $v): Vector
 
 ## Matrix
 
 3'e 4'lük bir matris yaratmak için
 
-	a = Matrix(3, 4)
+	$a = new Matrix(3, 4)
 
 Elemanları rasgele değerler alan bir matris yaratmak için
 
-	Matrix(row: any, col: any = undefined, minValue: any = undefined, maxValue: any = undefined)
+	__construct(mixed $row, mixed $col = null, mixed $minValue = null, mixed $maxValue = null)
 
 Örneğin, 
 
-	a = Matrix(3, 4, 1, 5)
+	$a = new Matrix(3, 4, 1, 5)
  
 3'e 4'lük elemanları 1 ve 5 arasında değerler alan bir matris yaratır.
 
 Matrisin i. satır, j. sütun elemanını getirmek için 
 
-	getValue(rowNo: number, colNo: number): number
+	getValue(int $rowNo, int $colNo): float
 
 Örneğin,
 
-	a.getValue(3, 4)
+	$a->getValue(3, 4)
 
 3. satır, 4. sütundaki değeri getirir.
 
 Matrisin i. satır, j. sütunundaki elemanı değiştirmek için
 
-	setValue(rowNo: number, colNo: number, value: number)
+	setValue(int $rowNo, int $colNo, float $value): void
 
 Örneğin,
 
-	a.setValue(3, 4, 5)
+	$a->setValue(3, 4, 5)
 
 3. satır, 4.sütundaki elemanın değerini 5 yapar.
 
 Matrisleri toplamak için
 
-	add(m: Matrix | number, v: any = undefined)
+	add(Matrix|int $m, Vector $v = null): void
 
 Çıkarmak için 
 
-	subtract(m: Matrix)
+	subtract(Matrix $m): void
 
 Çarpmak için 
 
-	multiply(m: Matrix): Matrix
+	multiply(Matrix $m): Matrix
 
 Elaman eleman matrisleri çarpmak için
 
-	elementProduct(m: Matrix | Vector): Matrix
+	elementProduct(Matrix|Vector $m): Matrix
 
 Matrisin transpozunu almak için
 
@@ -140,19 +140,19 @@ Matrisin transpozunu almak için
 
 Matrisin simetrik olup olmadığı belirlemek için
 
-	isSymmetric(): boolean
+	isSymmetric(): bool
 
 Determinantını almak için
 
-	determinant(): number
+	determinant(): float
 
 Tersini almak için
 
-	inverse()
+	inverse(): void
 
 Matrisin eigenvektör ve eigendeğerlerini bulmak için
 
-	characteristics(): Array<Eigenvector>
+	characteristics(): array
 
 Bu metodla bulunan eigenvektörler eigendeğerlerine göre büyükten küçüğe doğru 
 sıralı olarak döndürülür.
@@ -161,32 +161,32 @@ sıralı olarak döndürülür.
 
 Verilen bir değerin normal dağılımdaki olasılığını döndürmek için
 
-	zNormal(z: number): number
+	zNormal(float $z): float
 
 Verilen bir olasılığın normal dağılımdaki değerini döndürmek için
 
-	zInverse(p: number): number
+	zInverse(float $p): float
 
 Verilen bir değerin chi kare dağılımdaki olasılığını döndürmek için
 
-	chiSquare(x: number, freedom: number): number
+	chiSquare(float $x, int $freedom): float
 
 Verilen bir olasılığın chi kare dağılımdaki değerini döndürmek için
 
-	chiSquareInverse(p: number, freedom: number)
+	chiSquareInverse(float $p, int $freedom): float
 
 Verilen bir değerin F dağılımdaki olasılığını döndürmek için
 
-	fDistribution(F: number, freedom1: number, freedom2: number): number
+	fDistribution(float $F, int $freedom1, int $freedom2): float
 
 Verilen bir olasılığın F dağılımdaki değerini döndürmek için
 
-	fDistributionInverse(p: number, freedom1: number, freedom2: number): number
+	fDistributionInverse(float $p, int $freedom1, int $freedom2): float
 
 Verilen bir değerin t dağılımdaki olasılığını döndürmek için
 
-	tDistribution(T: number, freedom: number): number
+	tDistribution(float $T, int $freedom): float
 
 Verilen bir olasılığın t dağılımdaki değerini döndürmek için
 
-	tDistributionInverse(p: number, freedom: num
+	tDistributionInverse(float $p, int $freedom): float
