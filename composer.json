@@ -1,0 +1,21 @@
+{
+  "name": "olcaytaner/math",
+  "version": "1.0.0",
+  "description": "Math Library",
+  "type": "library",
+  "license": "GPL-3.0-or-later",
+  "autoload": {
+    "psr-4": {
+      "olcaytaner\\Math\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "y"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "11.4.0"
+  }
+}
