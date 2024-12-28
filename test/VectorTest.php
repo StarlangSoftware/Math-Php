@@ -1,7 +1,6 @@
 <?php
 
-namespace olcaytaner\Math;
-
+use olcaytaner\Math\Vector;
 use PHPUnit\Framework\TestCase;
 
 class VectorTest extends TestCase

@@ -1,7 +1,7 @@
 <?php
 
-namespace olcaytaner\Math;
-
+use olcaytaner\Math\Matrix;
+use olcaytaner\Math\Vector;
 use PHPUnit\Framework\TestCase;
 
 class MatrixTest extends TestCase

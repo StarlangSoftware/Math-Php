@@ -1,7 +1,6 @@
 <?php
 
-namespace olcaytaner\Math;
-
+use olcaytaner\Math\Distribution;
 use PHPUnit\Framework\TestCase;
 
 class DistributionTest extends TestCase

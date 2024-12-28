@@ -1,7 +1,6 @@
 <?php
 
-namespace olcaytaner\Math;
-
+use olcaytaner\Math\DiscreteDistribution;
 use PHPUnit\Framework\TestCase;
 
 class DiscreteDistributionTest extends TestCase
